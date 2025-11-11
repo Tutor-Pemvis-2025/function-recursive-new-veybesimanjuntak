@@ -4,32 +4,34 @@
         <attribute name="name" value="TFUNC"/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-11-11 08:56:49 PM"/>
-        <attribute name="created" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswODoyMjoyNCBQTTsyNTc4"/>
-        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswODo1Njo0OSBQTTsyOzI3MDE="/>
+        <attribute name="saved" value="2025-11-11 09:09:53 PM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswOTowNzo0NSBQTTsyNTg1"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswOTowOTowMyBQTTszO01VRzFJSTtMQVBUT1AtQkNNMEVMSVM7MjAyNS0xMS0xMTswODoyMToyNSBQTTtURlVOQ1sxXS5mcHJnOzY2NzQ="/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswOTowOTo1MyBQTTsxOzI2OTQ="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="n, hasil" type="Integer" array="False" size=""/>
-            <input variable="n"/>
-            <assign variable="hasil" expression="pertambahan(n)"/>
-            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; n" newline="True"/>
-            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; hasil" newline="True"/>
+            <declare name="x, hasil" type="Integer" array="False" size=""/>
+            <input variable="x"/>
+            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; x" newline="True"/>
+            <call expression="angka(x)"/>
+            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; angka(x)" newline="True"/>
         </body>
     </function>
-    <function name="HitungRekursif" type="Integer" variable="Hasil">
+    <function name="angka" type="Integer" variable="result">
         <parameters>
-            <parameter name="angka" type="Integer" array="False"/>
+            <parameter name="x" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="Hasil" type="Integer" array="False" size=""/>
-            <if expression="angka==1">
+            <declare name="result, hasilb" type="Integer" array="False" size=""/>
+            <if expression="x==1">
                 <then>
-                    <assign variable="Hasil" expression="1"/>
+                    <assign variable="result" expression="1"/>
                 </then>
                 <else>
-                    <assign variable="Hasil" expression="angka + HitungRekursif(angka - 1)"/>
+                    <assign variable="hasilb" expression="angka(x-1)"/>
+                    <assign variable="result" expression="x+hasilb"/>
                 </else>
             </if>
         </body>
