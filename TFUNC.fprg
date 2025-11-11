@@ -4,17 +4,18 @@
         <attribute name="name" value="TFUNC"/>
         <attribute name="authors" value="User"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-11-11 08:50:04 PM"/>
+        <attribute name="saved" value="2025-11-11 08:56:49 PM"/>
         <attribute name="created" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswODoyMjoyNCBQTTsyNTc4"/>
-        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswODo1MDowNCBQTTsxOzI2ODU="/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xMTswODo1Njo0OSBQTTsyOzI3MDE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="angka, Hasil" type="Integer" array="False" size=""/>
-            <input variable="angka"/>
-            <assign variable="Hasil" expression="HitungRekursif(angka)"/>
-            <output expression="hasil" newline="True"/>
+            <declare name="n, hasil" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="hasil" expression="pertambahan(n)"/>
+            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; n" newline="True"/>
+            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; hasil" newline="True"/>
         </body>
     </function>
     <function name="HitungRekursif" type="Integer" variable="Hasil">

@@ -9,22 +9,24 @@ public class TFUNC {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int angka, hasil;
+        int n, hasil;
 
-        angka = Integer.parseInt(input.nextLine());
-        hasil = hitungRekursif(angka);
-        System.out.println(hasil);
+        n = Integer.parseInt(input.nextLine());
+        hasil = pertambahan(n);
+        System.out.println("Bilangan yang dimasukkan : " + n);
+        System.out.println("Hasil perhitungan rekursif : " + hasil);
     }
     
-    public static int hitungRekursif(int angka) {
+    public static int pertambahan(int n) {
         int hasil;
 
-        if (angka == 1) {
+        if (n == 1) {
             hasil = 1;
         } else {
-            hasil = angka + hitungRekursif(angka - 1);
+            hasil = pertambahan(n - 1) + n;
         }
         
         return hasil;
     }
 }
+
